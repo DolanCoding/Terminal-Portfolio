@@ -1,0 +1,356 @@
+.projects-view {
+  width: 100%;
+  max-width: 1000px;
+  padding: 40px !important;
+  box-sizing: border-box;
+  margin: 0 auto;
+  min-width: 0;
+  justify-content: space-between !important;
+}
+
+.projects-header {
+  border: 1px solid var(--border-color);
+  border-radius: 2px;
+  padding: 15px 20px;
+  background-color: rgba(51, 214, 87, 0.05);
+  text-align: center;
+}
+
+.projects-header h1 {
+  margin: 0;
+  color: var(--color-primary);
+  font-weight: bold;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.projects-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.project-name {
+  color: var(--color-primary);
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.project-name-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+}
+
+.project-links {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.project-link {
+  font-size: 0.9rem;
+  color: var(--color-primary);
+  background: rgba(51, 214, 87, 0.04);
+  padding: 6px 8px;
+  border-radius: 4px;
+  border: 1px solid var(--border-color);
+  text-decoration: none;
+}
+
+.project-link:hover {
+  background: rgba(51, 214, 87, 0.08);
+  box-shadow: 0 4px 12px rgba(51, 214, 87, 0.06);
+}
+
+.project-description {
+  color: var(--text-color-secondary);
+  text-align: start;
+  font-size: 16px;
+}
+
+.projects-thumbnails {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.project-thumb {
+  flex: 1 1 0;
+  min-width: 0;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 2px;
+  border: 1px solid var(--border-color);
+  transition:
+    border 0.18s ease,
+    transform 0.18s ease,
+    box-shadow 0.18s ease;
+  cursor: pointer;
+}
+
+.project-thumb.active {
+  border: 2px solid var(--color-primary);
+}
+
+.project-thumb:hover,
+.project-thumb:focus {
+  transform: scale(1.03);
+  box-shadow: 0 8px 24px rgba(0, 208, 0, 0.06);
+  border-color: var(--color-primary);
+}
+
+.project-thumb:focus {
+  outline: 2px solid rgba(0, 208, 0, 0.12);
+  outline-offset: 2px;
+}
+
+.project-nav {
+  width: 100%;
+}
+
+.projects-nav-btns {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.projects-nav-btn {
+  background: rgba(51, 214, 87, 0.05);
+  color: var(--color-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 2px;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.projects-nav-btn:hover {
+  background: var(--button-hover-bg, #444);
+}
+
+.project-tech-section {
+  width: 100%;
+}
+/* Tech stack section */
+.project-tech-title {
+  margin-bottom: 10px;
+}
+.project-tech-list {
+  justify-content: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.tech-item {
+  background: rgba(51, 214, 87, 0.03);
+  border: 1px solid var(--border-color);
+  padding: 10px 20px;
+  border-radius: 2px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  align-self: center;
+}
+
+.tech-name {
+  color: var(--color-primary);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.tech-desc {
+  color: var(--text-color-secondary);
+  font-size: 0.82rem;
+}
+
+.tech-chip {
+  background: rgba(51, 214, 87, 0.06);
+  color: var(--color-primary);
+  border: 1px solid var(--border-color);
+  padding: 0.35rem 0.65rem;
+  border-radius: 2px;
+  font-size: 0.85rem;
+}
+
+/* Modal overlay for project preview */
+/* Modal overlay for project preview */
+.project-preview-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Modal window for preview (header above image) */
+.project-preview-window {
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-terminal);
+  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.7);
+  border: 1px solid var(--border-color);
+  min-width: 360px;
+  width: calc(85vw - 220px);
+  max-height: calc(85vh - 100px);
+  /* Ensure the preview window is at least the terminal content height */
+  min-height: calc(85vh - 100px);
+  overflow: hidden;
+}
+
+.project-preview-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--bg-ui-elements);
+  padding: 5px 1rem;
+  border: var(--border-width-thin) solid var(--border-color);
+  color: var(--text-color);
+}
+
+.project-preview-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: monospace;
+  font-size: 1rem;
+  color: var(--text-color);
+}
+
+/* Controls coverer on the right side of the header */
+.project-preview-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Dot base style (applies to spans and button) */
+.project-preview-dot {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1;
+  user-select: none;
+}
+.project-preview-dot.red {
+  background: #ff5f56;
+  border: 1px solid #e0443e;
+  color: black;
+}
+.project-preview-dot.red > span {
+  top: 0.5px;
+  font-size: 14px;
+  position: relative;
+}
+.project-preview-dot.yellow {
+  background: #ffbd2e;
+  border: 1px solid #dea123;
+  color: #000;
+}
+.project-preview-dot.green {
+  background: #27c93f;
+  border: 1px solid #13a10e;
+  color: #000;
+}
+
+/* Make red dot interactive (it's a button) */
+button.project-preview-dot {
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+button.project-preview-dot:focus {
+  outline: 2px solid rgba(255, 95, 86, 0.25);
+}
+
+.project-preview-content {
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+  flex: 1 1 0; /* allow content to grow/shrink to fill window */
+  padding: 1rem;
+  min-height: 0; /* allow flex child to shrink and prevent overflow */
+}
+
+.project-preview-img-large {
+  width: auto;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 2px;
+  border: 1px solid var(--color-primary, #33d657);
+  display: block;
+  max-width: 100%;
+  /* keep image within available content height so it scales down rather than overflowing */
+  max-height: 100%;
+}
+
+/* On smaller screens, increase the min-height to match terminal behavior */
+@media (max-width: 768px) {
+  .project-preview-window {
+    min-height: 95vh;
+  }
+}
+/* Navigation controls shown beneath the preview image */
+.project-preview-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background: transparent;
+  padding-bottom: 1rem;
+}
+
+.project-preview-nav-btn {
+  background: rgba(0, 208, 0, 0.06);
+  color: var(--color-primary);
+  border: 1px solid rgba(0, 208, 0, 0.12);
+  padding: 5px 10px;
+  border-radius: 2px;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.project-preview-nav-btn:hover {
+  background: rgba(0, 208, 0, 0.1);
+}
+
+.project-preview-nav-counter {
+  color: var(--text-color);
+  font-family: monospace;
+  font-size: 0.95rem;
+  opacity: 0.9;
+}

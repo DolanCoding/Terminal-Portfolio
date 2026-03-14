@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;600;700&family=Share+Tech+Mono&display=swap");
+
+/* ==============================================
+   CSS THEME VARIABLES - Global Color & Style Settings
+   ============================================== */
+
+:root {
+  /* PRIMARY COLORS */
+  --color-primary: #00d000; /* Main green accent color - Linux terminal green */
+  --color-primary-bright: #00ff00; /* Bright variant */
+  --color-secondary: #009900; /* Softer green for text */
+  --color-error: #ff0000; /* Error/warning red */
+  --color-warn: #ffff00; /* Warning yellow */
+  --color-success: #00d000; /* Success green */
+
+  /* TEXT COLORS - Global Text Color */
+  --text-color: #00d000; /* Universal text color - Linux terminal green */
+  --text-color-secondary: #009900; /* Softer text color */
+  --text-color-placeholder: rgba(0, 208, 0, 0.3); /* Placeholder text */
+
+  /* BACKGROUNDS */
+  --bg-primary: #000000; /* Page background (very dark gray) */
+  --bg-terminal: #0a0a0a; /* Terminal background (very dark gray) */
+  --bg-header: #050505; /* Header background (very dark gray) */
+  --bg-ui-elements: #0a0a0a; /* Background for header, sidebar, and input (darker) */
+  --bg-overlay: rgba(0, 0, 0, 0.95); /* Overlay background */
+  --glow-primary: none;
+  --glow-primary: inset 0 0 20px rgba(0, 208, 0, 0.06);
+  --glow-primary-hover: inset 0 0 28px rgba(0, 208, 0, 0.09);
+  --glow-primary-strong: inset 0 0 36px rgba(0, 208, 0, 0.12);
+  --glow-scrollbar: none;
+  --glow-scrollbar-hover: none;
+
+  /* BORDERS */
+  --border-color: #004d00; /* Border color - dark muted green */
+  --border-width: 1px; /* Main border width */
+  --border-width-thin: 1px; /* Thin border width */
+
+  /* ANIMATIONS */
+  --transition-fast: 0.2s ease;
+  --transition-smooth: 0.3s ease-out;
+
+  /* CRT SCANLINES */
+  --scanlines: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.15),
+    rgba(0, 0, 0, 0.15) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+}
+
+/* Universal Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base Styles */
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: "Source Code Pro", "Courier New", "Fira Code", "Consolas", monospace;
+  background-color: var(--bg-primary);
+  color: var(--text-color);
+}
+
+a {
+  color: var(--text-color);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--color-primary-bright);
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Smaller scrollbar */
+/* Slightly larger scrollbar */
+*::-webkit-scrollbar {
+  width: 6px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Darker green scrollbar thumb */
+*::-webkit-scrollbar-thumb {
+  background: #00d000;
+  border-radius: 0px;
+}
+
+/* Darker green scrollbar thumb on hover */
+*::-webkit-scrollbar-thumb:hover {
+  background: #00ff00;
+}
+
+/* Subtle inset green glow for terminal UI elements */
+.sidebar,
+.terminal-header,
+.terminal-input-wrapper {
+  box-shadow: var(--glow-primary);
+  transition: box-shadow var(--transition-smooth);
+}
+
+.sidebar:hover,
+.terminal-header:hover,
+.terminal-input-wrapper:focus-within {
+  box-shadow: var(--glow-primary-hover);
+}
+
+/* Stronger glow for active/focused states */
+.terminal-input-wrapper:focus {
+  box-shadow: var(--glow-primary-strong);
+}

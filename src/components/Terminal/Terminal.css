@@ -1,0 +1,168 @@
+/* ==============================================
+   TERMINAL CONTAINER - Layout Shell
+   Uses CSS Theme Variables from index.css
+   ============================================== */
+
+/* Responsive grid column for sidebar */
+/* Responsive grid column for sidebar */
+.terminal {
+  width: 85vw;
+  height: 85vh;
+  max-height: 100vh;
+  min-height: 0;
+  background-color: var(--bg-terminal);
+  color: var(--text-color);
+  font-family: "Source Code Pro", "Courier New", "Fira Code", "Consolas", monospace;
+  font-size: 16px;
+  line-height: 1.5;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  grid-template-rows: auto 1fr;
+  position: relative;
+  border: var(--border-width) solid var(--border-color);
+  border-radius: 0px;
+}
+
+/* Terminal Header */
+/* Terminal Header: dark grayish gradient */
+/* Terminal Header: solid dark gray background */
+.terminal-header {
+  grid-column: 1 / -1;
+  height: 50px;
+  padding: 0 20px;
+  border-bottom: var(--border-width-thin) solid var(--border-color);
+  background: var(--bg-ui-elements);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-shrink: 0;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+/* Terminal Body: flex column, content scrolls, input fixed */
+.terminal-body {
+  min-height: 0;
+  min-width: 0;
+  height: 100%;
+  grid-column: 1/3;
+  grid-row: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.terminal-content {
+  min-height: 0;
+  min-width: 0;
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* Terminal Input Wrapper: dark grayish gradient */
+/* Terminal Input Wrapper: darker grayish gradient */
+.terminal-input-wrapper {
+  flex-shrink: 0;
+  width: 100%;
+  background: var(--bg-ui-elements);
+  position: relative;
+  display: flex;
+  align-items: center;
+  z-index: 2;
+  height: 50px;
+}
+
+.help-btn {
+  background: none;
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+  height: 22px;
+  width: 22px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+  flex-shrink: 0;
+  margin-left: auto;
+  margin-right: 10px;
+}
+
+.help-btn:hover {
+  background-color: rgba(51, 214, 87, 0.1);
+}
+
+.help-btn:active {
+  transform: scale(0.95);
+}
+
+.terminal-dots {
+  display: flex;
+  gap: 6px;
+}
+
+.dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.dot:last-child > span {
+  font-size: 10px;
+  color: black;
+  position: relative;
+}
+
+.dot-close {
+  /* Lower-contrast red: subtle overlay against header */
+  background-color: rgba(255, 95, 86, 0.5);
+  border: 1px solid rgba(224, 68, 62, 0.25);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.dot-minimize {
+  /* Lower-contrast yellow */
+  background-color: rgba(255, 189, 46, 0.5);
+  border: 1px solid rgba(222, 161, 35, 0.22);
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.dot-maximize {
+  /* Lower-contrast green */
+  background-color: rgba(39, 201, 63, 0.5);
+  border: 1px solid rgba(19, 161, 14, 0.22);
+  color: rgba(0, 0, 0, 0.8);
+}
+
+/* Main Display Area */
+.terminal-display-area {
+  flex: 1;
+  border-bottom: var(--border-width-thin) solid var(--border-color);
+}
+
+/* Shared Prompt */
+.prompt {
+  color: var(--text-color);
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .terminal {
+    width: 95vw;
+    height: 95vh;
+  }
+}

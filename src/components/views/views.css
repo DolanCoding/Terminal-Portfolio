@@ -1,0 +1,44 @@
+/* ==============================================
+   SHARED VIEW STYLES - Common styling for all views
+   ============================================== */
+
+.view {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+  gap: 20px;
+  color: var(--text-color-secondary);
+  overflow-y: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.view::-webkit-scrollbar {
+  width: 8px;
+}
+
+.view::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+.view::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+  box-shadow: var(--glow-scrollbar);
+}
+
+.view::-webkit-scrollbar-thumb:hover {
+  background: var(--border-color);
+  box-shadow: var(--glow-scrollbar-hover);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .view {
+    padding: 15px;
+  }
+}

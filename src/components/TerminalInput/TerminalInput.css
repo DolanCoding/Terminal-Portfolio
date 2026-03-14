@@ -1,0 +1,38 @@
+/* ==============================================
+   TERMINAL INPUT - Command Input Field (Fixed at bottom)
+   ============================================== */
+
+.input-line {
+  width: 100%;
+  align-self: end;
+  display: flex;
+  gap: 10px;
+  height: 50px;
+  padding: 0 20px;
+  background-color: var(--bg-ui-elements);
+  align-items: center;
+  flex-shrink: 0;
+  border-top: var(--border-width-thin) solid var(--border-color);
+  box-sizing: border-box;
+}
+
+/* Terminal Input Field */
+.terminal-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: var(--color-primary);
+  font-family: inherit;
+  font-size: inherit;
+  outline: none;
+  caret-color: var(--color-primary);
+  padding: 2px 5px;
+}
+
+.terminal-input::placeholder {
+  color: var(--text-placeholder);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+}

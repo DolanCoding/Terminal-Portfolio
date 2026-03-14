@@ -1,0 +1,17 @@
+.matrix-rain-container {
+  width: 100%;
+  font-size: 100px;
+  font-weight: bold;
+  font-family: "Source Code Pro", monospace;
+  color: #00d000;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.matrix-rain-canvas {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  background: #0a0a0a;
+}

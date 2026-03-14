@@ -1,0 +1,92 @@
+/* ==============================================
+   ERROR VIEW - Unknown Command Handler
+   ============================================== */
+
+.error-view {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.error-header {
+  border: 1px solid var(--color-error);
+  border-radius: 2px;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  background-color: rgba(255, 107, 107, 0.05);
+}
+
+.error-title {
+  margin: 0;
+  color: var(--color-error);
+  font-weight: bold;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.error-content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.error-message {
+  background-color: rgba(255, 107, 107, 0.1);
+  border-left: 3px solid var(--color-error);
+  padding: 10px 15px;
+  color: #ff8c8c;
+}
+
+.error-cmd {
+  color: var(--color-error);
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.error-suggestion {
+  color: var(--text-color-secondary);
+  line-height: 1.6;
+  padding: 10px;
+  border-left: 2px solid var(--color-warn);
+  padding-left: 15px;
+}
+
+.error-suggestion p {
+  margin: 5px 0;
+}
+
+.error-footer {
+  margin-top: 15px;
+  border-top: 1px solid var(--border-color);
+  padding-top: 15px;
+}
+
+.error-footer p {
+  color: var(--text-color);
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.suggestion-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.suggestion {
+  background-color: rgba(51, 214, 87, 0.12);
+  border: 1px solid var(--border-color);
+  color: var(--color-primary);
+  padding: 4px 10px;
+  border-radius: 2px;
+  font-size: 11px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.suggestion:hover {
+  background-color: rgba(51, 214, 87, 0.25);
+  box-shadow: 0 0 8px rgba(51, 214, 87, 0.2);
+}

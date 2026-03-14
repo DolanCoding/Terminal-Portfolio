@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "./ProjectsView.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 const projects = [
   {
@@ -122,7 +124,7 @@ const ProjectsView: React.FC = () => {
                 className="project-link project-github"
                 aria-label={`Open ${project.name} on GitHub`}
               >
-                GitHub
+                <FontAwesomeIcon icon={faGithub} aria-hidden="true" /> GitHub
               </a>
             ) : null}
             {project.live ? (

@@ -99,7 +99,7 @@
   word-break: break-word;
 }
 
-@media (max-width: 600px), (max-zoom: 300%) {
+@media (max-width: 600px) {
   .sidebar nav button {
     font-size: clamp(0.6rem, 1vw, 0.9rem);
     padding: 0.3rem 0.5rem;

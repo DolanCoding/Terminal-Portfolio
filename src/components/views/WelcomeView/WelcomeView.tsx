@@ -19,12 +19,6 @@ const commandDescriptions: Record<string, string> = {
 
 const WelcomeView: React.FC = () => {
   const commands = getValidCommands();
-
-  const fullText =
-    "Explore my projects, skills, and professional experience through this interactive terminal interface. This portfolio is built with React, TypeScript, and Vite. Type a command below to navigate.";
-
-  // typing logic removed — render static content
-
   return (
     <div className="welcome-view">
       {/* Matrix Rain Animation - Replaces headline */}

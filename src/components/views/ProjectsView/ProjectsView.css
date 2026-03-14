@@ -64,6 +64,7 @@
   border-radius: 4px;
   border: 1px solid var(--border-color);
   text-decoration: none;
+  white-space: nowrap;
 }
 
 .project-link:hover {

@@ -88,21 +88,6 @@
   object-fit: contain;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .cv-view {
-    padding: 25px !important;
-  }
-
-  .cv-header h1 {
-    font-size: 16px;
-  }
-
-  .download-btn {
-    font-size: 12px;
-  }
-}
-
 /* Scrollbar styling for PDF viewer */
 .cv-container::-webkit-scrollbar {
   width: 8px;

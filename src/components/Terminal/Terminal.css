@@ -6,9 +6,9 @@
 /* Responsive grid column for sidebar */
 /* Responsive grid column for sidebar */
 .terminal {
-  width: 85vw;
-  height: 85vh;
-  max-height: 100vh;
+  width: 85dvw;
+  height: 85dvh;
+  max-height: 100dvh;
   min-height: 0;
   background-color: var(--bg-terminal);
   color: var(--text-color);

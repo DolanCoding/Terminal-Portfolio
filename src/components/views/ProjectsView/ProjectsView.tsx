@@ -72,27 +72,6 @@ const projects = [
     ],
     github: "https://github.com/DolanCoding/E-Commerce_App",
   },
-  {
-    name: "Fullstack Open",
-    description:
-      "A modern web development course project, covering React, Redux, Node.js, MongoDB, GraphQL, TypeScript, testing, and CI/CD.",
-    thumbnails: [
-      "/fullstack-open-thumb1.png",
-      "/fullstack-open-thumb2.png",
-      "/fullstack-open-thumb3.png",
-    ],
-    tech: [
-      { name: "React", desc: "Frontend UI and interactive course components." },
-      {
-        name: "Redux",
-        desc: "Manages global application state such as course progress and exercises.",
-      },
-      { name: "Node.js", desc: "Server-side runtime powering backend APIs and scripts." },
-      { name: "MongoDB", desc: "Document database used for flexible course and user data models." },
-      { name: "GraphQL", desc: "API layer allowing efficient and flexible client queries." },
-    ],
-    github: "https://github.com/yourusername/fullstack-open-project",
-  },
 ];
 
 const ProjectsView: React.FC = () => {

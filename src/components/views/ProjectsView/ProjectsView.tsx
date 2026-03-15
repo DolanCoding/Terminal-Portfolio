@@ -24,33 +24,53 @@ const projects = [
       },
       { name: "CSS", desc: "Custom styling and the terminal theme implementation." },
     ],
-    github: "https://github.com/yourusername/portfolio-terminal",
-    live: "https://yourdomain.com/portfolio-terminal",
+    github: "https://github.com/DolanCoding/Terminal-Portfolio",
+    live: "https://tp-sandy.vercel.app/",
   },
   {
-    name: "Learning By Playing",
+    name: "ShopHub — E-Commerce App",
     description:
-      "A gamified JavaScript learning platform using React, TypeScript, and Express, focused on SRP refactoring patterns and interactive lessons.",
-    thumbnails: ["/lbp-thumb1.png", "/lbp-thumb2.png", "/lbp-thumb3.png"],
+      "A full-stack e-commerce application with a React + TypeScript frontend (Vite, Tailwind, Redux Toolkit) and a Node.js/Express + TypeScript backend using PostgreSQL. Supports product browsing, search & filters, shopping cart, user authentication, checkout, and order management—built for responsive, production-ready flows and portfolio demonstrations.",
+    thumbnails: ["/Shophub1.png", "/Shophub2.png", "/Shophub3.png"],
     tech: [
       {
         name: "React",
-        desc: "Used for building lesson and exercise components and composing reusable UI patterns.",
+        desc: "Frontend UI library used to build pages, product cards, and interactive components.",
       },
       {
         name: "TypeScript",
-        desc: "Type safety across the frontend and shared types for reliability.",
+        desc: "Type-safe development across frontend and backend for more reliable code and better DX.",
+      },
+      {
+        name: "Vite",
+        desc: "Blazing-fast frontend dev server and build tool used for the React app.",
+      },
+      {
+        name: "Tailwind CSS",
+        desc: "Utility-first CSS framework used for responsive, mobile-first design and rapid UI development.",
+      },
+      {
+        name: "Redux Toolkit",
+        desc: "State management for cart, auth, and application state with concise reducers and async flows.",
       },
       {
         name: "Express",
-        desc: "Used to build frontend components and handle client-side interactions and rendering.",
+        desc: "Backend API server handling authentication, products, cart, and orders.",
       },
       {
-        name: "Postgres",
-        desc: "Relational database storing lessons, user progress, and metadata.",
+        name: "PostgreSQL",
+        desc: "Relational database storing products, users, carts, and orders.",
+      },
+      {
+        name: "JWT + bcryptjs",
+        desc: "JWT for stateless authentication and bcryptjs for secure password hashing.",
+      },
+      {
+        name: "Axios",
+        desc: "HTTP client used by the frontend to communicate with the backend API.",
       },
     ],
-    github: "https://github.com/yourusername/learning-by-playing",
+    github: "https://github.com/DolanCoding/E-Commerce_App",
   },
   {
     name: "Fullstack Open",
